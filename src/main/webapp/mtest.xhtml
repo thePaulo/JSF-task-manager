@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Resolves a date to a day of the week"/>
+    <meta name="author" content="Tsepo Maleka"/>
+
+    <title>Gerenciador de tarefas</title>
+    
+    <style>
+        .inputText{
+            margin:10px;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css"/>
+
+</h:head>
+<h:body>
+    <div class="container" >
+    <div class="card" style="background-color:#CCC;margin-top:50px;border-radius: 25px">
+        <label style="margin-left:20px;margin-top:20px">Cadastrar tarefa</label>
+        <form id="task" method="post" action="http://localhost:8080/api/v1/task">
+
+            
+            <h:inputText id="title" style="margin:20px;width:50%" styleClass="form-control" pt:placeholder="Título" />
+            <h:inputTextarea cols="100" rows="5" style="margin:20px;" id="description" pt:placeholder="Descrição"/>
+
+            <div class="row">
+                <h:inputText id="owner" style="margin-right:50px;margin-left:35px;" pt:placeholder="Responsável"/>
+                
+                <label style="margin-right:50px"> Prioridade: </label>
+                <h:selectOneMenu id="priority" >
+                    <f:selectItem itemValue="high" itemLabel="alta" />
+                    <f:selectItem itemValue="med" itemLabel="média" />
+                    <f:selectItem itemValue="low" itemLabel="baixa" />
+                </h:selectOneMenu>
+            </div>
+            <h:inputText id="deadline" style="margin:20px;width:50%" styleClass="form-control" pt:placeholder="Deadline" />
+            <h:commandButton type="submit" styleClass="btn btn-primary" style="margin-left:20px;margin-top:40px;margin-bottom:50px" value="Cadastrar "/>
+        </form>
+    </div>
+    </div>
+
+
+</h:body>
+
+</html>
