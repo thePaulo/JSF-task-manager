@@ -34,4 +34,12 @@ public class TaskController {
     @DeleteMapping(path="{Id}")
     public void deleteTask(@PathVariable("Id") Long taskId){ taskService.deleteTask(taskId); }
 
+    @PutMapping(path="{Id}")
+    public void updateTopic(@PathVariable("Id") Long topicId,
+                            @RequestParam(required = false) String title,
+                            @RequestParam(required = false) String description,
+                            @RequestParam(required = false) String owner){
+        //taskService.updateTask(topicId,title,description,owner);
+    }
+
 }

@@ -23,6 +23,7 @@ public class Task {
     private String owner;
     private String priority;
     private LocalDateTime deadline;
+    private String status;
 
     public Task() {
     }
@@ -93,5 +94,13 @@ public class Task {
 
     public void setDeadline(LocalDateTime deadline) {
         this.deadline = deadline;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

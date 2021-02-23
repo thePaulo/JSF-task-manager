@@ -37,6 +37,18 @@
 			<groupId>org.joinfaces</groupId>
 			<artifactId>jsf-spring-boot-starter</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>8.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 		
 		
 		<dependency>
