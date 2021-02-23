@@ -22,7 +22,8 @@ public class Task {
     private String description;
     private String owner;
     private String priority;
-    private LocalDateTime deadline;
+    private LocalDateTime creation;
+    private Long deadline;
     private String status;
 
     public Task() {
@@ -32,14 +33,15 @@ public class Task {
         this.id = id;
     }
 
-    public Task(String title, String description, String owner, String priority) {
+    public Task(String title, String description, String owner, String priority, Long deadline) {
         this.title = title;
         this.description = description;
         this.owner = owner;
         this.priority = priority;
+        this.deadline = deadline;
     }
 
-    public Task(Long id, String title, String description, String owner, String priority, LocalDateTime deadline) {
+    public Task(Long id, String title, String description, String owner, String priority, Long deadline) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -88,11 +90,11 @@ public class Task {
         this.priority = priority;
     }
 
-    public LocalDateTime getDeadline() {
+    public Long getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(LocalDateTime deadline) {
+    public void setDeadline(Long deadline) {
         this.deadline = deadline;
     }
 
@@ -102,5 +104,13 @@ public class Task {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public LocalDateTime getCreation() {
+        return creation;
+    }
+
+    public void setCreation(LocalDateTime creation) {
+        this.creation = creation;
     }
 }

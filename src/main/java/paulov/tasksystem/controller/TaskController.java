@@ -24,8 +24,11 @@ public class TaskController {
     public List<Task> registerTask(@RequestParam(required = false) String title,
                              @RequestParam(required = false) String description,
                              @RequestParam(required = false) String owner,
-                             @RequestParam(required = false) String priority) {
-        Task task = new Task(title,description,owner,priority);
+                             @RequestParam(required = false) String priority,
+                             @RequestParam(required = false) Long deadline){
+        
+        
+        Task task = new Task(title,description,owner,priority,deadline);
         taskService.addNewTask(task);
         
         return getTasks();
